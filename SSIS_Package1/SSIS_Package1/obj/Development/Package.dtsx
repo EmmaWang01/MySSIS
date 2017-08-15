@@ -1,0 +1,2458 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/26/2017 9:13:29 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MACBOOK-EMMA"
+  DTS:CreatorName="MONEY3\E.Wang"
+  DTS:DTSID="{F17E7B08-1163-437A-8958-FD8ED6404C1E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{2B022545-18D9-46BC-872E-16F7C217602E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV_Branches]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{18630DB6-EEAA-4023-BA8D-81D937CAF23A}"
+      DTS:ObjectName="CSV_Branches">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\e.wang\Desktop\Emmas\SSIS\SSIS_Package1\Branches.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ï»¿Company"
+              DTS:DTSID="{39AEBF21-3E5C-4A5D-95DB-9A63B4033367}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Group"
+              DTS:DTSID="{77C76A13-E2D6-4E5D-BD79-DF652A8F0AE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{6A1BB38F-D2D8-4658-B829-F718CEEECD30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Entity"
+              DTS:DTSID="{C96136DE-3D30-43D2-A2F7-8EC3106172E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StateCode"
+              DTS:DTSID="{4E1A3FD4-C29A-4F58-B2A0-E04E722E0E37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sub Group State"
+              DTS:DTSID="{C969FEF0-3F28-4791-BF17-AD5FEA334609}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AreaCode"
+              DTS:DTSID="{E57801A4-733F-48BE-84E1-BA403F6E67F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area"
+              DTS:DTSID="{13F33A36-FB32-4A87-A5F0-8233943822E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Branch"
+              DTS:DTSID="{DF95C080-5B2D-4326-AF32-C200319B5255}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{BE5E9476-F5D5-4306-ABE5-04B3C76131AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ABN"
+              DTS:DTSID="{595243BE-6555-4518-90FE-380E44663538}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ACL"
+              DTS:DTSID="{F9D04116-1468-4394-B7C5-E6151594B742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shop"
+              DTS:DTSID="{44AE51E7-3FE8-4508-8B5C-1A927AC66D18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Street"
+              DTS:DTSID="{6AD5C102-B4E2-46E5-A297-8ABCDEBDC3CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Suburb"
+              DTS:DTSID="{AED35ED1-8E38-4D35-9C17-8482400DCA4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostCode"
+              DTS:DTSID="{3FEF92AF-8552-4130-8B1E-E831B1694029}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Phone"
+              DTS:DTSID="{7673976B-EC1B-4935-AF3A-03C9BC017774}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[m3-db03.m3-main.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{72A75B2B-F639-404C-B6DF-4FE9F0F7D8AE}"
+      DTS:ObjectName="m3-db03.m3-main.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=m3-db03;User ID=sa;Initial Catalog=M3_MAIN;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhU54+C1MqkmMFBnU72l9qAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABvxZZNaxN64bhyM4R7BUaDAAAAAASAAACgAAAAEAAAADPw2J7tknByPu8RDEQWf/4YAAAAcQHf21bjtqsGI7faouiD00iV81ZYUl90FAAAAIvHHvqWK7m/w/cQfw4/mtzMt99W</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0AF18DDB-BD37-474E-9EE7-7C5AD89DCB65}"
+      DTS:ObjectName="MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MACBOOK-EMMA\EMMA_SQL_2014;Initial Catalog=MyTestDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Trans Fact"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{81A8BC06-E5C1-4271-8188-E5EF07F27485}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Trans Fact"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Trans Fact\Conditional Split - Is new Trans"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split - Is new Trans"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input].Columns[TransactionPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="TransactionPK"
+                      lineageId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Insert]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Insert"
+                  synchronousInputId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Lookup.TransactionPK)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Update]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Update"
+                  synchronousInputId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Trans Fact\Insert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SSIS_FactTrans]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Trans Fact\Insert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[TransactionPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="TransactionPK"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[TransactionPK]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[ProcessDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ProcessDate"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[Credit]"
+                      cachedDataType="r8"
+                      cachedName="Credit"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[Credit]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[Debit]"
+                      cachedDataType="r8"
+                      cachedName="Debit"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[Debit]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Debit]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[LoanPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="LoanPK"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[LoanPK]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanPK]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[ClientPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="ClientPK"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[ClientPK]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClientPK]" />
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].Columns[BranchPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="BranchPK"
+                      externalMetadataColumnId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[BranchPK]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchPK]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="TransactionPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[Credit]"
+                      dataType="numeric"
+                      name="Credit"
+                      precision="38"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[Debit]"
+                      dataType="numeric"
+                      name="Debit"
+                      precision="38"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="LoanPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[ClientPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="ClientPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input].ExternalColumns[BranchPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="BranchPK" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Trans Fact\Insert.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Trans Fact\Lookup TransID"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup TransID"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select TransactionPK from SSIS_FactTrans</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select TransactionPK from SSIS_FactTrans) [refTable]
+where [refTable].[TransactionPK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TransactionPK" dataType="DT_STR" length="40" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Trans Fact\Lookup TransID.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input].Columns[TransactionPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="TransactionPK"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">TransactionPK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]"
+                      name="TransactionPK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TransactionPK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Trans Fact\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select top 150
+	rtm.RTM_ID as TransactionPK,
+	rtm.RTM_DateC as ProcessDate,
+	rtm.RTM_ValueCR as Credit,
+	rtm.RTM_ValueDB as Debit,
+	rtm.RTM_IDLink_RMR as LoanPK,
+	ClientCMR.CMR_ID as ClientPK,
+	BranchCMR.CMR_ID as BranchPK
+from iO_Product_Transaction RTM
+
+join iO_Link_MasterReference ClientLMR on rtm.RTM_IDLink_RMR=ClientLMR.LMR_IDLink_Code_ID
+	and ClientLMR.LMR_IDLink_Association='{146afcaa-059b-469e-a000-0103e84144dc}' -- primaryBrower
+join iO_Client_MasterReference ClientCMR on ClientCMR.CMR_ID=ClientLMR.LMR_IDLink_CMR
+
+join iO_Link_MasterReference BranchLMR on RTM.RTM_IDLink_RMR=BranchLMR.LMR_IDLink_Code_ID
+	and BranchLMR.LMR_IDLink_Association='{b55145aa-2697-43b5-9c6a-c4a0960823d8}' -- owning branch
+join iO_Client_MasterReference BranchCMR on BranchLMR.LMR_IDLink_CMR=BranchCMR.CMR_ID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Trans Fact\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[m3-db03.m3-main.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[m3-db03.m3-main.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TransactionPK]"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]"
+                      name="TransactionPK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProcessDate]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]"
+                      name="ProcessDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Credit]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit]"
+                      name="Credit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Debit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Debit]"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Debit]"
+                      name="Debit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoanPK]"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanPK]"
+                      name="LoanPK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClientPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClientPK]"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClientPK]"
+                      name="ClientPK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchPK]"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchPK]"
+                      name="BranchPK"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="TransactionPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Credit]"
+                      dataType="r8"
+                      name="Credit" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Debit]"
+                      dataType="r8"
+                      name="Debit" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="LoanPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClientPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="ClientPK" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BranchPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="BranchPK" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TransactionPK]"
+                      name="TransactionPK" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProcessDate]"
+                      name="ProcessDate" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Credit]"
+                      dataType="r8"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Credit]"
+                      name="Credit" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Debit]"
+                      dataType="r8"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Debit]"
+                      name="Debit" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LoanPK]"
+                      name="LoanPK" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClientPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClientPK]"
+                      name="ClientPK" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BranchPK]"
+                      name="BranchPK" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Trans Fact\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[TransactionPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="TransactionPK"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[ProcessDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ProcessDate"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[Credit]"
+                      cachedDataType="r8"
+                      cachedName="Credit"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[Debit]"
+                      cachedDataType="r8"
+                      cachedName="Debit"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Debit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[LoanPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="LoanPK"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanPK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[ClientPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="ClientPK"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClientPK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[BranchPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="BranchPK"
+                      lineageId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchPK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract Trans Fact\Sort.Inputs[Sort Input].Columns[TransactionPK1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="TransactionPK"
+                      lineageId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[OLE DB Source.TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[OLE DB Source.TransactionPK]"
+                      name="OLE DB Source.TransactionPK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[TransactionPK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[ProcessDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[ProcessDate]"
+                      name="ProcessDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProcessDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Credit]"
+                      dataType="r8"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Credit]"
+                      name="Credit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Debit]"
+                      dataType="r8"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Debit]"
+                      name="Debit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Debit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[LoanPK]"
+                      name="LoanPK"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[LoanPK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[ClientPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[ClientPK]"
+                      name="ClientPK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClientPK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[BranchPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[BranchPK]"
+                      name="BranchPK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[BranchPK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Lookup.TransactionPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Extract Trans Fact\Sort.Outputs[Sort Output].Columns[Lookup.TransactionPK]"
+                      name="Lookup.TransactionPK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output].Columns[TransactionPK]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Trans Fact.Paths[Insert]"
+              endId="Package\Extract Trans Fact\Insert.Inputs[OLE DB Destination Input]"
+              name="Insert"
+              startId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Insert]" />
+            <path
+              refId="Package\Extract Trans Fact.Paths[Lookup Match Output]"
+              endId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Inputs[Conditional Split Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract Trans Fact\Lookup TransID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Extract Trans Fact.Paths[OLE DB Source Output]"
+              endId="Package\Extract Trans Fact\Lookup TransID.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Trans Fact\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Trans Fact.Paths[Update]"
+              endId="Package\Extract Trans Fact\Sort.Inputs[Sort Input]"
+              name="Update"
+              startId="Package\Extract Trans Fact\Conditional Split - Is new Trans.Outputs[Update]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Branch From Excel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F9434B7E-5B54-4A86-9D6B-28E9B1872366}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Branch From Excel"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Branch From Excel\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Branch From Excel\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV_Branches]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV_Branches]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Group]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Entity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Entity]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Entity]"
+                      name="Entity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateCode]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]"
+                      name="StateCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Sub Group State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub Group State]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Sub Group State]"
+                      name="Sub Group State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AreaCode]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]"
+                      name="AreaCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Area]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Area]"
+                      name="Area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Branch]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Branch]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Branch]"
+                      name="Branch"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ABN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ABN]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ABN]"
+                      name="ABN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ACL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ACL]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ACL]"
+                      name="ACL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Shop]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shop]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Shop]"
+                      name="Shop"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Street]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Street]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Street]"
+                      name="Street"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Suburb]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Suburb]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Suburb]"
+                      name="Suburb"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[PostCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostCode]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[PostCode]"
+                      name="PostCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Phone]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Company]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ï»¿Company]"
+                      length="50"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Company]"
+                      name="Company"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ï»¿Company]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ï»¿Company" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Entity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Entity" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StateCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub Group State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sub Group State" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AreaCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Area" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Branch]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Branch" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ABN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ABN" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ACL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ACL" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shop]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Shop" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Street]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Suburb]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Suburb" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PostCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Phone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Phone" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Branch From Excel\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SSIS_ExcelBranch]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Branch From Excel\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[MACBOOK-EMMA\EMMA_SQL_2014.MyTestDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Company]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Company"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Company]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Group"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Entity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Entity"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Entity]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Entity]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StateCode"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sub Group State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sub Group State"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sub Group State]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Sub Group State]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AreaCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AreaCode"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[AreaCode]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Area"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Area]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Branch]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Branch"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Branch]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Branch]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ABN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ABN"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ABN]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ABN]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ACL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ACL"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ACL]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[ACL]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shop]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Shop"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Shop]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Shop]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Street]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Street"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Street]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Suburb]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Suburb"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Suburb]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Suburb]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PostCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PostCode"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostCode]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[PostCode]" />
+                    <inputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Entity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Entity" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StateCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sub Group State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sub Group State" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AreaCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AreaCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Area" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Branch]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Branch" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ABN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ABN" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ACL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ACL" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Shop]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Shop" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Suburb]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Suburb" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PostCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Phone" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Branch From Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Branch From Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Branch From Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Branch From Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Branch From Excel.Paths[Flat File Source Output]"
+              endId="Package\Import Branch From Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import Branch From Excel\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7739217D-A66E-485F-BEAE-7EBD3F6C98BD}"
+      DTS:From="Package\Import Branch From Excel"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract Trans Fact" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.5,42"
+          Id="Package\Extract Trans Fact"
+          TopLeft="133.75,111.25" />
+        <NodeLayout
+          Size="151.5,42"
+          Id="Package\Import Branch From Excel"
+          TopLeft="146.25,41.25" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="219,83.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Trans Fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="106.5,42"
+          Id="Package\Extract Trans Fact\Insert"
+          TopLeft="66.2499999999999,284.75" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Extract Trans Fact\Lookup TransID"
+          TopLeft="108.416666666667,108.75" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Extract Trans Fact\Sort"
+          TopLeft="226.833333333333,278.666666666667" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Extract Trans Fact\Conditional Split - Is new Trans"
+          TopLeft="105.25,189.666666666667" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Extract Trans Fact\OLE DB Source"
+          TopLeft="114.333333333333,42.0833333333333" />
+        <EdgeLayout
+          Id="Package\Extract Trans Fact.Paths[OLE DB Source Output]"
+          TopLeft="187.375,84.0833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.6666666666667"
+              Start="0,0"
+              End="0,17.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Trans Fact.Paths[Lookup Match Output]"
+          TopLeft="184.083333333333,150.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.916666666667"
+              Start="0,0"
+              End="0,31.416666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.416666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,9.9036458333335,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Trans Fact.Paths[Update]"
+          TopLeft="207.25,231.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.583333333333,47"
+              Start="0,0"
+              End="68.583333333333,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.088122605364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.088122605364"
+                    Point2="0,19.088122605364"
+                    Point3="4,19.088122605364" />
+                  <mssgle:LineSegment
+                    End="64.583333333333,19.088122605364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.583333333333,19.088122605364"
+                    Point2="68.583333333333,19.088122605364"
+                    Point3="68.583333333333,23.088122605364" />
+                  <mssgle:LineSegment
+                    End="68.583333333333,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.28029296875,13.9453125,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Trans Fact.Paths[Insert]"
+          TopLeft="158.25,231.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.7500000000001,53.0833333333326"
+              Start="0,0"
+              End="-38.7500000000001,45.5833333333326">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5587484035757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5587484035757"
+                    Point2="0,21.5587484035757"
+                    Point3="-4,21.5587484035757" />
+                  <mssgle:LineSegment
+                    End="-34.7500000000001,21.5587484035757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.7500000000001,21.5587484035757"
+                    Point2="-38.7500000000001,21.5587484035757"
+                    Point3="-38.7500000000001,25.5587484035757" />
+                  <mssgle:LineSegment
+                    End="-38.7500000000001,45.5833333333326" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.1279882812501,26.5587484035757,27.5059765625,9.40234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Trans Fact\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Trans Fact\Lookup TransID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Trans Fact\Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import Branch From Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Import Branch From Excel\OLE DB Destination"
+          TopLeft="225.5,203" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Import Branch From Excel\Flat File Source"
+          TopLeft="236,104.5" />
+        <EdgeLayout
+          Id="Package\Import Branch From Excel.Paths[Flat File Source Output]"
+          TopLeft="311.25,146.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.5"
+              Start="0,0"
+              End="0,49">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Branch From Excel\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

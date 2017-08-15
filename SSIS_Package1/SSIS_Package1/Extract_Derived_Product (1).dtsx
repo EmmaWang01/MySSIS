@@ -1,0 +1,725 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/12/2017 11:54:35 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="M3-BUNSQL"
+  DTS:CreatorName="MONEY3\a.gilmore"
+  DTS:DTSID="{3863633A-6949-446E-8260-A1013EC4D305}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
+  DTS:LocaleID="3081"
+  DTS:ObjectName="{19F670A5-59FC-4F6E-B15C-AF02F1DB75E5}"
+  DTS:VersionGUID="{F39D9837-F554-4C1B-AE73-852230E5E1C7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{18971A8A-CACD-43EC-8226-EF7701838EDB}"
+      DTS:ObjectName="Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=M3-BUNSQL\DWDEV;Initial Catalog=Money3_DW_Staging;Provider=SQLOLEDB;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{597DA532-22B4-438A-90D8-8F1075293561}"
+      DTS:ObjectName="Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=M3-BUNSQL\SQL_DW_DEV_2014;Initial Catalog=Temp_Build_Money3_DW_Staging_Will_Be_Dropped;Provider=SQLOLEDB;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Warehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{84304C14-6CD0-4DA6-B3AD-DEF0F8F3C2F6}"
+      DTS:ObjectName="Warehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=M3-BUNSQL\SQL_DW_DEV_2014;Initial Catalog=Temp_Build_Money3_DW_Warehouse_Will_Be_Dropped;Provider=SQLOLEDB;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Deploy DEV Money3 DW\SSIS\Staging.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{70BEA6CA-B62E-498A-914B-A15C4E10CA95}"
+      DTS:ObjectName="Staging" />
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Deploy DEV Money3 DW\SSIS\Warehouse.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{B4A2BAC5-3798-48FD-A038-3F2C550A0401}"
+      DTS:ObjectName="Warehouse" />
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Deploy DEV Money3 DW\SSIS\Stage.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{043FB75D-3C9E-48FF-A13A-C501D8028DCF}"
+      DTS:ObjectName="Stage" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{541AA8B9-BB6A-44D5-A2B4-643574186B20}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_Batch_Effective_Date">
+      <DTS:VariableValue
+        DTS:DataType="7">1/12/2011</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{510CE159-82A5-458F-80CC-AE298FBBE86B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_Batch_Execution_Id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{322D6CAD-4AF7-4D60-BA8D-4F952A4D4DA1}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_Batch_Execution_Status">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4AA04303-CD1B-4009-BC17-B7B0C76B4B82}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_Batch_Id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7B0B4B66-BB51-4189-91D8-EAE65BDB0537}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_Batch_Status">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Check"
+      DTS:CreationName="SSIS.ReplacementTask"
+      DTS:Description="&lt;EzName&gt;&lt;/EzName&gt;&lt;EzName&gt;Check&lt;/EzName&gt;"
+      DTS:DTSID="{98CF853F-B25D-47D5-859E-A835DE4D55CC}"
+      DTS:ExecutableType="SSIS.ReplacementTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Check">
+      <DTS:Variables />
+      <DTS:ObjectData />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Product"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{419E9EEA-4445-48F2-813B-930A668E0062}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Product"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferMaxRows="30000"
+          defaultBufferSize="31457380"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Product\Product"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Product"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  [ProductPK]
+				,[Product]
+				,[ProductShortName]
+				,[ProductMINLoan]
+				,[ProductMAXLoan]
+				,[ProductMinTerm]
+				,[ProductMaxTerm]
+				,[LoanPK]
+				
+    FROM
+    (
+		-- Product
+SELECT DISTINCT CPM.XRP_ID [ProductPK]
+	,CPM.XRP_Detail [Product]
+	,SUBSTRING(CPM.XRP_Detail, (Charindex('\', CPM.XRP_Detail) + 1), LEN(CPM.XRP_Detail) - Charindex('\', CPM.XRP_Detail) + 1) [ProductShortName]
+	,CPM.XRP_ValueMin [ProductMINLoan]
+	,CPM.XRP_ValueMax [ProductMAXLoan]
+	,CPM.XRP_TermMin [ProductMinTerm]
+	,CPM.XRP_TermMax [ProductMaxTerm]
+,PMR.RMR_ID [LoanPK]
+,NULL AS reject_Ind
+FROM stg.APL_Product_MasterReference PMR
+INNER JOIN stg.APL_Control_ProductMaster CPM
+	ON PMR.RMR_IDLink_XRP = CPM.XRP_ID
+
+		) AS Src
+		</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Product\Product.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductPK]"
+                      length="40"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductPK]"
+                      name="ProductPK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[Product]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[Product]"
+                      length="512"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[Product]"
+                      name="Product"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductShortName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductShortName]"
+                      length="512"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductShortName]"
+                      name="ProductShortName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMINLoan]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMINLoan]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMINLoan]"
+                      name="ProductMINLoan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMAXLoan]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMAXLoan]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMAXLoan]"
+                      name="ProductMAXLoan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMinTerm]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMinTerm]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMinTerm]"
+                      name="ProductMinTerm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMaxTerm]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMaxTerm]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMaxTerm]"
+                      name="ProductMaxTerm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[LoanPK]"
+                      length="40"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[LoanPK]"
+                      name="LoanPK"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="ProductPK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[Product]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductShortName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ProductShortName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMINLoan]"
+                      dataType="r8"
+                      name="ProductMINLoan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMAXLoan]"
+                      dataType="r8"
+                      name="ProductMAXLoan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMinTerm]"
+                      dataType="i4"
+                      name="ProductMinTerm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[ProductMaxTerm]"
+                      dataType="i4"
+                      name="ProductMaxTerm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].ExternalColumns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="LoanPK" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductPK]"
+                      name="ProductPK" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[Product]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[Product]"
+                      name="Product" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductShortName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductShortName]"
+                      name="ProductShortName" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMINLoan]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMINLoan]"
+                      name="ProductMINLoan" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMAXLoan]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMAXLoan]"
+                      name="ProductMAXLoan" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMinTerm]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMinTerm]"
+                      name="ProductMinTerm" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMaxTerm]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ProductMaxTerm]"
+                      name="ProductMaxTerm" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[LoanPK]"
+                      name="LoanPK" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Product\Staging Product"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Staging Product"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">stg.[Stage_Product]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Product\Staging Product.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="ProductPK"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductPK]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductPK]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[Product]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductShortName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="ProductShortName"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductShortName]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductShortName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductMINLoan]"
+                      cachedDataType="r8"
+                      cachedName="ProductMINLoan"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMINLoan]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMINLoan]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductMAXLoan]"
+                      cachedDataType="r8"
+                      cachedName="ProductMAXLoan"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMAXLoan]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMAXLoan]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductMinTerm]"
+                      cachedDataType="i4"
+                      cachedName="ProductMinTerm"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMinTerm]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMinTerm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[ProductMaxTerm]"
+                      cachedDataType="i4"
+                      cachedName="ProductMaxTerm"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMaxTerm]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[ProductMaxTerm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].Columns[LoanPK]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="LoanPK"
+                      externalMetadataColumnId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[LoanPK]"
+                      lineageId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output].Columns[LoanPK]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[Product_sKey]"
+                      dataType="i4"
+                      name="Product_sKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="ProductPK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductShortName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ProductShortName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMINLoan]"
+                      dataType="numeric"
+                      name="ProductMINLoan"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMAXLoan]"
+                      dataType="numeric"
+                      name="ProductMAXLoan"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMinTerm]"
+                      dataType="i4"
+                      name="ProductMinTerm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductMaxTerm]"
+                      dataType="i4"
+                      name="ProductMaxTerm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[LoanPK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="LoanPK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input].ExternalColumns[Reject_Ind]"
+                      dataType="bool"
+                      name="Reject_Ind" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Product\Staging Product.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Product\Staging Product.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Staging Product.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Product\Staging Product.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Product\Staging Product.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Product.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Product\Staging Product.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Product\Product.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Control Properties"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{4F6DF4FD-4402-4D6F-A5A0-AC2D399962CB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Control Properties"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{84304C14-6CD0-4DA6-B3AD-DEF0F8F3C2F6}"
+          SQLTask:SqlStatementSource="Select&#xA;                                                          CONVERT(DateTime,[Current_Batch_Effective_Date]),&#xA;                                                          CONVERT(int,[Current_Batch_Execution_Id]),&#xA;                                                          Current_Batch_Execution_Status,&#xA;                                                          CONVERT(int,Current_Batch_Id),&#xA;                                                          Current_Batch_Status from ( Select * from dbo.Control_Properties ) AS S&#xA;                                                        PIVOT ( MAX([Value])&#xA;                                                          FOR Control_Property IN (&#xA;                                                            [Current_Batch_Effective_Date],&#xA;                                                            [Current_Batch_Execution_Id],&#xA;                                                            Current_Batch_Execution_Status,&#xA;                                                            Current_Batch_Id,&#xA;                                                            Current_Batch_Status ) ) AS P"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Current_Batch_Effective_Date" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="1"
+            SQLTask:DtsVariableName="User::Current_Batch_Execution_Id" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="2"
+            SQLTask:DtsVariableName="User::Current_Batch_Execution_Status" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="3"
+            SQLTask:DtsVariableName="User::Current_Batch_Id" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="4"
+            SQLTask:DtsVariableName="User::Current_Batch_Status" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Truncate Product"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{B2F55F9C-4018-4A77-B497-99397218BD48}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Truncate Product"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{597DA532-22B4-438A-90D8-8F1075293561}"
+          SQLTask:SqlStatementSource="Truncate TABLE stg.[Stage_Product]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{5DD518DB-1CF5-46C9-B5A3-4253DF965A31\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{7CF8A102-9D58-4CA8-9CFC-E4F278665820}"
+      DTS:From="Package\Check"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{7CF8A102-9D58-4CA8-9CFC-E4F278665820}"
+      DTS:To="Package\Get Control Properties" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{874E48FE-48D3-4653-B8E8-35C26D8FB2E4\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{5CC0EC66-F8C6-4746-B81C-FB5C26A31D3B}"
+      DTS:From="Package\Get Control Properties"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{5CC0EC66-F8C6-4746-B81C-FB5C26A31D3B}"
+      DTS:To="Package\SQL Truncate Product" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{BA10FDAC-86A4-41C8-9827-13FF54CB68C1\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{6B57C75B-9820-4F75-A4BA-C3D4DE9C8E1F}"
+      DTS:From="Package\SQL Truncate Product"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{6B57C75B-9820-4F75-A4BA-C3D4DE9C8E1F}"
+      DTS:To="Package\Data Flow Product" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>

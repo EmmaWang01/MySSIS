@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/1/2017 4:58:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MACBOOK-EMMA"
+  DTS:CreatorName="MONEY3\E.Wang"
+  DTS:DTSID="{6C5E338E-698C-438B-96F6-1422BCD4C1F2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
+  DTS:LocaleID="3081"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{6F38BD56-F42D-454C-9EA1-BF22F072054D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>
